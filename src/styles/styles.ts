@@ -36,3 +36,5 @@ export const Content = styled.div`
         gap: 22px;
     }
 `;
+
+   
