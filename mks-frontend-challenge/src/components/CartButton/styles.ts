@@ -10,22 +10,22 @@ export const Container = styled.button`
         cursor: pointer;
         filter: brightness(85%);
     }
+`;
 
-    div {
-        padding: 16px 15px;
-        font-size: 18px;
-        font-weight: 700;
-        gap: 16px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+export const ButtonContent = styled.div`
+    padding: 16px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
-        p {
-            padding-top: 2px;
-        }
-    }
+export const ButtonText = styled.p`
+    padding-top: 2px;
 `;
 
 export const CartMenu = styled.div`
@@ -54,28 +54,29 @@ export const CartMenuHeader = styled.div`
     width: 100%;
     gap: 50px;
     padding: 0 47px;
+    margin-bottom: 20px;
+`;
 
-    h1 {
-        font-size: 24px;
-        color: #ffffff;
-        font-weight: 700;
-        text-align: left;
-    }
+export const CartMenuHeaderTitle = styled.h1`
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+`;
 
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        width: 38px;
-        height: 38px;
-        border-radius: 100%;
-        color: #ffffff;
-        background: #000000;
+export const CloseMenuHeader = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 100%;
+    color: #ffffff;
+    background: #000000;
 
-        :hover {
-            cursor: pointer;
-        }
+    :hover {
+        cursor: pointer;
     }
 `;
 
@@ -84,51 +85,55 @@ export const CartMenuBody = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
-    padding: 70px 37px 20px 37px;
+    padding: 37px 37px 20px 37px;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-    .cards {
-        padding: 10px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        width: 100%;
-        max-height: 600px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-    }
-
-    .total {
-        display: flex;
-        font-size: 18px;
-        justify-content: space-between;
-        font-weight: 700;
-        color: #ffffff;
+    ::-webkit-scrollbar {
+        width: 5px;
     }
 `;
 
-export const CartMenuFooter = styled.button`
+export const CartMenuBodyContent = styled.div`
+    padding: 10px;
+    overflow: visible;
+    width: 100%;
+    min-height: 300px;
+    max-height: calc(100%-54px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+`;
+
+export const CartMenuFooter = styled.div``;
+
+export const FinishButton = styled.button`
     display: flex;
     font-size: 28px;
     font-weight: 700;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90px;
+    min-height: 90px;
     background: #000000;
     color: #ffffff;
 
     :hover {
         cursor: pointer;
     }
-
-    @media screen and (max-width: 700px) {
-        position: fixed;
-        bottom: 0;
-        z-index: 1;
-    }
 `;
+
+export const CartTotalContent = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 37px 20px;
+    color: #ffffff;
+    font-weight: 700;
+`;
+
+export const LabelTotal = styled.p``;
+
+export const CartTotal = styled.p``;

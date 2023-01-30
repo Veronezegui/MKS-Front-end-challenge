@@ -1,13 +1,13 @@
-import { Container, Title } from "./styles";
+import { Container, Subtitle, Title, TitleContainer } from "./styles";
 import CartButton from "@/components/CartButton";
 
 export default function Header() {
     return (
         <Container>
-            <Title>
-                <h1>MKS</h1>
-                <p>Sistemas</p>
-            </Title>
+            <TitleContainer>
+                <Title>MKS</Title>
+                <Subtitle>Sistemas</Subtitle>
+            </TitleContainer>
             <CartButton />
         </Container>
     );

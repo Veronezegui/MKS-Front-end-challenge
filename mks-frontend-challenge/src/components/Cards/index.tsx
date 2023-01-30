@@ -1,33 +1,51 @@
-import { Container, Description, Title, Button, Content } from "./styles";
+import {
+    Container,
+    Description,
+    Button,
+    Content,
+    ImageContainer,
+    ProductName,
+    Price,
+    TitleContainer,
+    ButtonText,
+} from "./styles";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-interface CardProps {
+export interface CardProps {
+    id: number;
     image: string;
     title: string;
     price: string;
-    description: string;
+    description?: string;
+    event: () => void;
 }
 
-export default function Card({ image, title, price, description }: CardProps) {
+export default function Card({
+    image,
+    title,
+    price,
+    description,
+    event,
+}: CardProps) {
     return (
         <Container>
             <Content>
-                <div className="image">
+                <ImageContainer>
                     <Image src={image} alt="Product" width={111} height={138} />
-                </div>
-                <Title>
-                    <h1>{title}</h1>
-                    <p>{price}</p>
-                </Title>
+                </ImageContainer>
+                <TitleContainer>
+                    <ProductName>{title}</ProductName>
+                    <Price>{`R$${price}`}</Price>
+                </TitleContainer>
                 <Description>{description}</Description>
-                <Button>
+                <Button onClick={event}>
                     <Icon
                         icon="mdi:marketplace-outline"
                         color="white"
                         fontSize={16}
                     />
-                    <p>COMPRAR</p>
+                    <ButtonText>COMPRAR</ButtonText>
                 </Button>
             </Content>
         </Container>

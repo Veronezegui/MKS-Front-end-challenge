@@ -5,31 +5,43 @@ import Card from "@/components/Cards";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import api from "@/service/api";
+import { addProduct } from "@/features/cartMenu";
+import { useDispatch } from "react-redux";
+import ContentLoader from "react-content-loader";
 
-interface ProductsProps {
+export interface ProductsProps {
     id: number;
     name: string;
     brand: string;
     description: string;
     photo: string;
     price: string;
-    createdAt: Date;
-    updatedAt: Date;
+    qtd: number;
 }
 
 export default function Home() {
     const [products, setProducts] = useState<ProductsProps[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const dispatch = useDispatch();
 
     async function getProducts() {
-        api.get("/products", {
-            params: {
-                page: 1,
-                rows: 8,
-                sortBy: "id",
-                orderBy: "DESC",
-            },
-        }).then((response) => setProducts(response.data.products));
-        console.log(products);
+        await api
+            .get("/products", {
+                params: {
+                    page: 1,
+                    rows: 8,
+                    sortBy: "id",
+                    orderBy: "DESC",
+                },
+            })
+            .then((response) => {
+                setProducts(response.data.products);
+                setIsLoading(false);
+            });
+    }
+
+    function handleOnClick(item: ProductsProps) {
+        dispatch(addProduct(item));
     }
 
     useEffect(() => {
@@ -50,17 +62,78 @@ export default function Home() {
                 />
             </Head>
             <Header />
-            <Content>
-                {products.map((item) => (
-                    <Card
-                        key={item.id}
-                        title={item.name}
-                        description={item.description}
-                        image={item.photo}
-                        price={`R$${item.price}`}
-                    />
-                ))}
-            </Content>
+            <>
+                {isLoading ? (
+                    <Content>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                        <ContentLoader height="217" width="285" viewBox="0 0 265 230">
+                            <rect x="15" y="50" rx="2" ry="2" width="350" height="150" />
+                            <rect x="15" y="230" rx="2" ry="2" width="170" height="20" />
+                            <rect x="60" y="230" rx="2" ry="2" width="170" height="20" />
+                        </ContentLoader>
+                    </Content>
+                ) : (
+                    <Content>
+                        {products.map((item) => (
+                            <Card
+                                key={item.id}
+                                id={item.id}
+                                title={item.name}
+                                description={item.description}
+                                image={item.photo}
+                                price={parseInt(item.price).toLocaleString("pt-BR")}
+                                event={() => {
+                                    handleOnClick(item);
+                                }}
+                            />
+                        ))}
+                    </Content>
+                )}
+            </>                
             <Footer />
         </Container>
     );

@@ -16,23 +16,23 @@ export const Container = styled.div`
     }
 `;
 
-export const Title = styled.div`
+export const TitleContainer = styled.div`
     display: flex;
     gap: 10px;
     align-items: center;
+`;
 
-    h1 {
-        font-size: 36px;
-        font-weight: 600;
-        color: #fff;
-        line-height: 19px;
-    }
+export const Title = styled.h1`
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 19px;
+`;
 
-    p {
-        padding-top: 14px;
-        font-size: 18px;
-        font-weight: 100;
-        color: #fff;
-        line-height: 19px;
-    }
+export const Subtitle = styled.p`
+    padding-top: 14px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 19px;
 `;
