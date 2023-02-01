@@ -18,7 +18,7 @@ export interface CardProps {
     title: string;
     price: string;
     description?: string;
-    event: () => void;
+    event?: () => void;
 }
 
 export default function Card({
@@ -29,7 +29,7 @@ export default function Card({
     event,
 }: CardProps) {
     return (
-        <Container>
+        <Container data-testid="card">
             <Content>
                 <ImageContainer>
                     <Image src={image} alt="Product" width={111} height={138} />

@@ -15,7 +15,7 @@ export const Container = styled.div`
     border-radius: 8px;
 
     @media screen and (max-width: 345px) {
-        padding: 10px 10px;
+        padding: 5px 5px;
         justify-content: flex-start;
     }
 `;
@@ -64,7 +64,7 @@ export const QtdTitle = styled.p`
     color: #000000;
 `;
 
-export const QtdContainer = styled.p`
+export const QtdContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,4 +113,8 @@ export const Price = styled.p`
     font-size: 12px;
     color: #000000;
     font-weight: 700;
+
+    @media screen and (max-width: 343px) {
+        visibility: hidden;
+    }
 `;

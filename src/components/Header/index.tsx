@@ -8,7 +8,7 @@ export default function Header() {
                 <Title>MKS</Title>
                 <Subtitle>Sistemas</Subtitle>
             </TitleContainer>
-            <CartButton />
+            <CartButton data-testid="openCart" />
         </Container>
     );
 }

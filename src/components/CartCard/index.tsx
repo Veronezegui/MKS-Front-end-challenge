@@ -29,9 +29,15 @@ export default function CartCard({
     onDecrease,
 }: CartCardProps) {
     return (
-        <Container>
-            <ImageContainer src={photo} alt="product" width={46} height={57} />
-            <ProductName>{name}</ProductName>
+        <Container data-testid="cartCard">
+            <ImageContainer
+                src={photo}
+                alt="product"
+                width={46}
+                height={57}
+                data-testid="photo"
+            />
+            <ProductName data-testid="name">{name}</ProductName>
             <QtdSelector>
                 <QtdTitle>Qtd:</QtdTitle>
                 <QtdContainer>

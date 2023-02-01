@@ -18,10 +18,9 @@ import {
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 import CartCard from "../CartCard";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { removeProduct, incrementQtd, decreaseQtd } from "@/features/cartMenu";
 import { calculateTotal } from "@/features/cartTotal";
-import { useDispatch } from "react-redux";
 
 export interface ProductsProps {
     id: number;
@@ -58,12 +57,14 @@ export default function CartButton() {
 
     useEffect(() => {
         calcTotal(products);
-        console.log(products);
     }, [products]);
 
     return (
         <>
-            <Container onClick={() => setIsOpen(!isOpen)}>
+            <Container
+                onClick={() => setIsOpen(!isOpen)}
+                data-testid="openCart"
+            >
                 <ButtonContent>
                     <Icon
                         icon="typcn:shopping-cart"
@@ -74,12 +75,15 @@ export default function CartButton() {
                 </ButtonContent>
             </Container>
             {isOpen === true && (
-                <CartMenu>
+                <CartMenu data-testid="cartMenu">
                     <CartMenuHeader>
                         <CartMenuHeaderTitle>
                             Carrinho de compras
                         </CartMenuHeaderTitle>
-                        <CloseMenuHeader onClick={() => setIsOpen(false)}>
+                        <CloseMenuHeader
+                            onClick={() => setIsOpen(false)}
+                            data-testid="closeCart"
+                        >
                             X
                         </CloseMenuHeader>
                     </CartMenuHeader>
@@ -108,7 +112,7 @@ export default function CartButton() {
                     <CartMenuFooter>
                         <CartTotalContent>
                             <LabelTotal>Total:</LabelTotal>
-                            <CartTotal>
+                            <CartTotal data-testid="cartTotal">
                                 R${parseInt(cartTotal).toLocaleString("pt-BR")}
                             </CartTotal>
                         </CartTotalContent>
