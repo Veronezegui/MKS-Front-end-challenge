@@ -79,7 +79,7 @@ $ npm run dev
 
 ## 🦸 Autor
 
-<img style="border-radius: 50%;" src="[https://avatars.githubusercontent.com/u/95949825?s=400&u=71abea02fa5086704e648496f0de845501599ca0&v=4](https://avatars.githubusercontent.com/u/47906992?v=4)" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/47906992?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Guilherme Veroneze</b></sub></a> 🚀
  <br />
