@@ -52,42 +52,122 @@ Eletronics store - é uma aplicação desenvolvida em React.js com Next.js,Types
 ---
 
 
+## 🚀 Como executar o projeto
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Pré-requisitos
 
-## Getting Started
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node](https://nodejs.org/). 
+Além disto é bom ter um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/).
 
-First, run the development server:
+#### 🎲 Clonando o repositório e instalando as dependências
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# Clone este repositório
+$ git clone https://github.com/MiguelMarcola/List-Countries-Project.git
+
+# Acesse a pasta do projeto web no terminal/cmd
+$ cd List-Countries-Project/web
+
+# Instale as dependências web
+$ npm install
+
+# Acesse a pasta do projeto server no terminal/cmd
+$ cd ../server
+
+# Instale as dependências web
+$ npm install
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para o funcionamento de todas as funcionalidades do App será necessário criar um arquivo ".env" na raiz da pasta server projeto (List-Countries-Project/server) contendo as variáveis de ambiente do banco de dados e da documentação.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+PROJECT_NAME=Project ARB
+PROJECT_DESCRIPTION=This project is the backend to ARB Project
+DOCUMENTATION_VERSION=1.0.0
+DOCUMENTATION_ENDPOINT=docs
+NODE_ENV=local
+APP_PORT=3001
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=countries
+DATABASE_USERNAME=root
+DATABASE_PASSWORD=s3cr3t
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Estas são as mesmas configuração presentes no docker-compose.yml
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### 🎲 Rodando Back-end
 
-## Learn More
+```bash
 
-To learn more about Next.js, take a look at the following resources:
+# Acesse a pasta do projeto server no terminal/cmd
+$ cd List-Countries-Project/server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Com o docker instalado rode o seguinte comando para criar o nosso banco de dados
+$ docker-compose up -d
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
 
-## Deploy on Vercel
+# O servidor inciará na porta:3001 - acesse http://localhost:3001/docs e terá acesso a documentação da api
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### 🎲 Rodando Front-end
+
+```bash
+
+# Acesse a pasta do projeto server no terminal/cmd
+$ cd List-Countries-Project/web
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# O servidor inciará na porta:5173 - acesse http://localhost:5173/
+
+```
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website**  ([Reactjs](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/) + [Nodejs](https://nodejs.org/en/) + [Nestjs](https://nestjs.com/))
+
+-   ReactJs
+-   Vite
+-   Bootstrap
+-   Reactstrap
+-   SASS
+-   React query
+-   Axios
+-   Toast
+-   NodeJs
+-   Typescript
+-   Typeorm
+-   Swagger
+-   Jest
+
+> Veja o arquivo Back-end  [package.json](https://github.com/MiguelMarcola/List-Countries-Project/blob/main/server/package.json)
+> Veja o arquivo Front-end  [package.json](https://github.com/MiguelMarcola/List-Countries-Project/blob/main/web/package.json)
+
+## 🦸 Autor
+
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/95949825?s=400&u=71abea02fa5086704e648496f0de845501599ca0&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Miguel Marçola</b></sub></a> 🚀
+ <br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Miguel-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/miguel-mar%C3%A7ola-28535a151/)](https://www.linkedin.com/in/miguel-mar%C3%A7ola-28535a151/) 
+[![Gmail Badge](https://img.shields.io/badge/Miguel%20Mar%C3%A7ola-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:miguelmarcola@gmail.com)](miguelmarcola@gmail.com)
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença [MIT](./LICENSE).
+
+Feito com muita dedicação por Miguel Marçola 👋🏽 [Entre em contato!](https://www.linkedin.com/in/miguel-mar%C3%A7ola-28535a151/)
+
+---
