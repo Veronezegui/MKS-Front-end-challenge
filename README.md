@@ -18,9 +18,39 @@
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   
   <img alt="Feito pelo Guilherme" src="https://img.shields.io/badge/feito%20por-Guilherme-%237519C1">
-  
- 
 </p>
+
+<h4 align="center">
+	🚧   Concluído 🚀 🚧
+</h4>
+
+## 💻 Sobre o projeto
+
+Eletronics store - é uma aplicação desenvolvida em React.js com Next.js,Typescript e styled-components que consome uma rest API de produtos eletrônicos. Trata-se de uma página que lista todos os produtos da API através de cards, dando a opção ao usuário de escolher quais produtos deseja comprar, ao pressionar o botão "comprar" de qualquer produto, o mesmo será acrescentado ao carrinho, no qual o usuário pode selecionar a quantidade de cada item e conferir o valor total de sua compra, além de poder remover qualquer produto já adicionado.
+
+---
+
+
+## ⚙️ Funcionalidades
+
+- [x] Skeleton enquanto a chamada a api está em loading.
+- [x] Tela com a listagem dos produtos contidos na API.
+- [x] Botão comprar em cada produto listado, com a função de adicionar os produtos selecionados ao carrinho.
+- [x] Botão com a função de exibir o carrinho de compras, exibe a quantidade de produtos selecionados.
+- [x] Carrinho que exibe todos os produtos selecionados com a opção de aumentar ou diminuir a quantidade deles, o total e o botão para finalizar a compra.
+
+---
+
+## 🎨 Layout
+
+<p align="center">
+
+  <img alt="Visual" title="#Visual" src="./layout.png" width="800px" style="margin-top: 30px;">
+
+</p>
+
+---
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
