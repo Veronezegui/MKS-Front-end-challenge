@@ -26,7 +26,7 @@
 
 ## 💻 Sobre o projeto
 
-Eletronics store - é uma aplicação desenvolvida em React.js com Next.js,Typescript e styled-components que consome uma rest API de produtos eletrônicos. Trata-se de uma página que lista todos os produtos da API através de cards, dando a opção ao usuário de escolher quais produtos deseja comprar, ao pressionar o botão "comprar" de qualquer produto, o mesmo será acrescentado ao carrinho, no qual o usuário pode selecionar a quantidade de cada item e conferir o valor total de sua compra, além de poder remover qualquer produto já adicionado.
+Eletronics store - é uma aplicação desenvolvida em React.js com Next.js, Typescript e styled-components que consome uma rest API de produtos eletrônicos. Trata-se de uma página que lista todos os produtos da API através de cards, dando a opção ao usuário de escolher quais produtos deseja comprar, ao pressionar o botão "comprar" de qualquer produto, o mesmo será acrescentado ao carrinho, no qual o usuário pode selecionar a quantidade de cada item e conferir o valor total de sua compra, além de poder remover qualquer produto já adicionado.
 
 ---
 
