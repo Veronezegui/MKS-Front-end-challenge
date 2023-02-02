@@ -49,6 +49,12 @@ Eletronics store - é uma aplicação desenvolvida em React.js com Next.js, Type
 
 </p>
 
+<p align="center">
+
+  <img alt="Visual" title="#Visual" src="./layout2.png" width="800px" style="margin-top: 30px;">
+
+</p>
+
 ---
 
 
