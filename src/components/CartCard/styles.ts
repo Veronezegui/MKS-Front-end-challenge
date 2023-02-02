@@ -118,9 +118,3 @@ export const Price = styled.p`
         visibility: hidden;
     }
 `;
-
-export const Price = styled.p`
-    font-size: 12px;
-    color: #000000;
-    font-weight: 700;
-`;

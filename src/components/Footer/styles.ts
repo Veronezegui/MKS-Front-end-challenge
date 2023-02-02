@@ -17,9 +17,3 @@ export const Title = styled.p`
     font-weight: 400;
     color: #000000;
 `;
-
-export const Title = styled.p`
-    font-size: 12px;
-    font-weight: 400;
-    color: #000000;
-`;
