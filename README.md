@@ -93,6 +93,6 @@ $ npm run dev
 
 Este projeto está sob a licença [MIT](./LICENSE).
 
-Feito com muita dedicação por Miguel Marçola 👋🏽 [Entre em contato!](https://www.linkedin.com/in/miguel-mar%C3%A7ola-28535a151/)
+Feito com muita dedicação por Guilherme Veroneze 👋🏽 [Entre em contato!](https://github.com/Veronezegui)
 
 ---
