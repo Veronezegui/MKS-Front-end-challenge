@@ -1,3 +1,28 @@
+<h1 align="center">
+    Eletronics store
+</h1>
+
+<h3 align="center">
+    Loja de Eletrônicos
+</h3>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Veronezegui/MKS-Front-end-challenge?color=%2304D361">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Veronezegui/MKS-Front-end-challenge">
+  
+  <a href="https://github.com/Veronezegui/MKS-Front-end-challenge/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Veronezegui/MKS-Front-end-challenge">
+  </a>
+    
+   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  
+  <img alt="Feito pelo Miguel" src="https://img.shields.io/badge/feito%20por-Miguel-%237519C1">
+  
+ 
+</p>
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
